@@ -6,18 +6,18 @@ import javax.swing.JFrame;
 
 import business.Participant;
 
-public class QuarterFinals extends JFrame{
+public class SemiFinals extends JFrame{
 
-	//Atributos
+	//Atributos 
 	private Participant participant;
-	private QuarterButton button;
+	private SemiButton button;
 	
 	//Metodo construtor
-	public QuarterFinals(Participant participant) {
+	public SemiFinals(Participant participant) {
 		this.participant = participant;
 		
 		setSize(800, 800);
-		setTitle("Quartas de Final");
+		setTitle("Semifinal");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		organizeLayout();
 		setVisible(true);
@@ -26,10 +26,12 @@ public class QuarterFinals extends JFrame{
 	//Metodo para deixar os elementos dessa janela da forma desejada 
 	public void organizeLayout() {
 		setLayout(new BorderLayout());
-		QuarterPanel quarter = new QuarterPanel(participant);
-		add(quarter, BorderLayout.CENTER);
 		
-		button = new QuarterButton();
-		add(button.newQuarterButton(participant), BorderLayout.SOUTH);
+		SemiPanel semi = new SemiPanel(participant);
+		add(semi, BorderLayout.CENTER);
+		
+		button = new SemiButton();
+		add(button.newSemiButton(participant), BorderLayout.SOUTH);
+		
 	}
 }
