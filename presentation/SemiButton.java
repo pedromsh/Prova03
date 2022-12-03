@@ -11,17 +11,17 @@ public class SemiButton extends JButton implements ActionListener{
 
 	//Atributos
 	private Participant participant;
+	private SemiFinals window;
 	
 	//Metodo para criar o botao e adicionar o action listener
-	public JButton newSemiButton(Participant participant) {
-		JButton button = new JButton("Enviar");
-		button.addActionListener(this);
-		
-		return button;
+	public SemiButton(Participant participant, SemiFinals window) {
+		this.participant = participant;
+		this.window = window;
 	}
 		
 	public void actionPerformed(ActionEvent e) {
 		Finals finals = new Finals(participant);
+		window.setVisible(false);
 		
 	}
 

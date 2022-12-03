@@ -2,6 +2,7 @@ package presentation;
 
 import java.awt.BorderLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import business.Participant;
@@ -10,7 +11,7 @@ public class SemiFinals extends JFrame{
 
 	//Atributos 
 	private Participant participant;
-	private SemiButton button;
+	private JButton button;
 	
 	//Metodo construtor
 	public SemiFinals(Participant participant) {
@@ -30,8 +31,10 @@ public class SemiFinals extends JFrame{
 		SemiPanel semi = new SemiPanel(participant);
 		add(semi, BorderLayout.CENTER);
 		
-		button = new SemiButton();
-		add(button.newSemiButton(participant), BorderLayout.SOUTH);
+		button = new JButton("Enviar");
+		SemiButton semiButton = new SemiButton(participant, this);
+		this.button.addActionListener(semiButton);
+		add(button, BorderLayout.SOUTH);
 		
 	}
 }

@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 
 public class NameWindow extends JFrame{
 
+	//Metodo construtor
 	public NameWindow() {
 		setSize(800, 200);
 		setTitle("Informação do participante");
@@ -12,8 +13,9 @@ public class NameWindow extends JFrame{
 		setVisible(true);
 	}
 	
+	//Metodo para adicionar painel a janela
 	public void addPanel() {
-		NamePanel panel = new NamePanel();
+		NamePanel panel = new NamePanel(this);
 		add(panel);
 	}
 }

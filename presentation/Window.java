@@ -15,7 +15,7 @@ public class Window extends JFrame {
 	}
 	
 	public void organizeLayout() {
-		Menu menu = new Menu();
+		Menu menu = new Menu(this);
 		add(menu);
 	}
 

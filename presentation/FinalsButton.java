@@ -11,18 +11,17 @@ public class FinalsButton extends JButton implements ActionListener{
 
 	//Atributos
 	private Participant participant;
+	private Finals window;
 		
 	//Metodo para criar um botao e adicionar o action listener
-	public JButton newFinalsButton() {
-		JButton button = new JButton();
-		button.addActionListener(this);
-		
-		return button;
+	public FinalsButton(Participant participant, Finals window) {
+		this.participant = participant;
+		this.window = window;
 	}
 	
 	//Metodo para exibir a bandeira do campeao
 		public void actionPerformed(ActionEvent e) {
-			
+			window.setVisible(false);
 			
 		}
 }

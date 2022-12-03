@@ -2,6 +2,7 @@ package presentation;
 
 import java.awt.BorderLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import business.Participant;
@@ -10,7 +11,7 @@ public class QuarterFinals extends JFrame{
 
 	//Atributos
 	private Participant participant;
-	private QuarterButton button;
+	private JButton button;
 	
 	//Metodo construtor
 	public QuarterFinals(Participant participant) {
@@ -29,7 +30,9 @@ public class QuarterFinals extends JFrame{
 		QuarterPanel quarter = new QuarterPanel(participant);
 		add(quarter, BorderLayout.CENTER);
 		
-		button = new QuarterButton();
-		add(button.newQuarterButton(participant), BorderLayout.SOUTH);
+		button = new JButton("Enviar");
+		QuarterButton quarterButton = new QuarterButton(participant, this, quarter.getField());
+		this.button.addActionListener(quarterButton);
+		add(button, BorderLayout.SOUTH);
 	}
 }

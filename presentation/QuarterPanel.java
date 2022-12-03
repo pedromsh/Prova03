@@ -11,7 +11,7 @@ import business.Participant;
 public class QuarterPanel extends JPanel{
 
 	//Atributos
-	private JTextField field;
+	private JTextField field[];
 	private JLabel team;
 	private JLabel scoreBoard;
 	private JLabel x;
@@ -21,9 +21,19 @@ public class QuarterPanel extends JPanel{
 	//Metodo construtor
 	public QuarterPanel(Participant participant) {
 		this.participant = participant;
+		this.field = new JTextField[16];
 		organizePanel();
 	}
 	
+	//Metrodos getters and setters
+	public JTextField[] getField() {
+		return field;
+	}
+
+	public void setField(JTextField[] field) {
+		this.field = field;
+	}
+
 	//Metodo para deixar os elementos do painel posicionados da forma escolhida
 	public void organizePanel() {
 		
@@ -32,15 +42,15 @@ public class QuarterPanel extends JPanel{
 		team = new JLabel("Seleção:");
 		add(team);
 		
-		field = new JTextField(10);
-		add(field);
-		participant.getSoccerTeams().add(field.getText());
+		field[0] = new JTextField(10);
+		add(field[0]);
+//		participant.getSoccerTeams().add(field[0].getText());
 		
 		scoreBoard = new JLabel("Placar:");
 		add(scoreBoard);
 		
-		field = new JTextField(5);
-		add(field);
+		field[1] = new JTextField(5);
+		add(field[1]);
 		
 		x = new JLabel("X");
 		add(x);
@@ -48,28 +58,26 @@ public class QuarterPanel extends JPanel{
 		team = new JLabel("Seleção:");
 		add(team);
 		
-		field = new JTextField(10);
-		add(field);
-		participant.getSoccerTeams().add(field.getText());
+		field[2] = new JTextField(10);
+		add(field[2]);
 		
 		scoreBoard = new JLabel("Placar:");
 		add(scoreBoard);
 		
-		field = new JTextField(5);
-		add(field);
+		field[3] = new JTextField(5);
+		add(field[3]);
 		
 		team = new JLabel("Seleção:");
 		add(team);
 		
-		field = new JTextField(10);
-		add(field);
-		participant.getSoccerTeams().add(field.getText());
+		field[4] = new JTextField(10);
+		add(field[4]);
 		
 		scoreBoard = new JLabel("Placar:");
 		add(scoreBoard);
 		
-		field = new JTextField(5);
-		add(field);
+		field[5] = new JTextField(5);
+		add(field[5]);
 		
 		x = new JLabel("X");
 		add(x);
@@ -77,28 +85,26 @@ public class QuarterPanel extends JPanel{
 		team = new JLabel("Seleção:");
 		add(team);
 		
-		field = new JTextField(10);
-		add(field);
-		participant.getSoccerTeams().add(field.getText());
+		field[6] = new JTextField(10);
+		add(field[6]);
 		
 		scoreBoard = new JLabel("Placar:");
 		add(scoreBoard);
 		
-		field = new JTextField(5);
-		add(field);
+		field[7] = new JTextField(5);
+		add(field[7]);
 		
 		team = new JLabel("Seleção:");
 		add(team);
 		
-		field = new JTextField(10);
-		add(field);
-		participant.getSoccerTeams().add(field.getText());
+		field[8] = new JTextField(10);
+		add(field[8]);
 		
 		scoreBoard = new JLabel("Placar:");
 		add(scoreBoard);
 		
-		field = new JTextField(5);
-		add(field);
+		field[9] = new JTextField(5);
+		add(field[9]);
 		
 		x = new JLabel("X");
 		add(x);
@@ -106,28 +112,26 @@ public class QuarterPanel extends JPanel{
 		team = new JLabel("Seleção:");
 		add(team);
 		
-		field = new JTextField(10);
-		add(field);
-		participant.getSoccerTeams().add(field.getText());
+		field[10] = new JTextField(10);
+		add(field[10]);
 		
 		scoreBoard = new JLabel("Placar:");
 		add(scoreBoard);
 		
-		field = new JTextField(5);
-		add(field);
+		field[11] = new JTextField(5);
+		add(field[11]);
 		
 		team = new JLabel("Seleção:");
 		add(team);
 		
-		field = new JTextField(10);
-		add(field);
-		participant.getSoccerTeams().add(field.getText());
+		field[12] = new JTextField(10);
+		add(field[12]);
 		
 		scoreBoard = new JLabel("Placar:");
 		add(scoreBoard);
 		
-		field = new JTextField(5);
-		add(field);
+		field[13] = new JTextField(5);
+		add(field[13]);
 		
 		x = new JLabel("X");
 		add(x);
@@ -135,15 +139,14 @@ public class QuarterPanel extends JPanel{
 		team = new JLabel("Seleção:");
 		add(team);
 		
-		field = new JTextField(10);
-		add(field);
-		participant.getSoccerTeams().add(field.getText());
+		field[14] = new JTextField(10);
+		add(field[14]);
 		
 		scoreBoard = new JLabel("Placar:");
 		add(scoreBoard);
 		
-		field = new JTextField(5);
-		add(field);
+		field[15] = new JTextField(5);
+		add(field[15]);
 		
 	}
 }

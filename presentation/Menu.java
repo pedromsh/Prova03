@@ -12,8 +12,10 @@ public class Menu extends JPanel{
 	private ImportButton importButton;
 	private ExportButton export;
 	private JLabel label;
+	private Window window;
 	
-	public Menu() {
+	public Menu(Window window) {
+		this.window = window;
 		createButtons();
 	}
 	
@@ -25,7 +27,7 @@ public class Menu extends JPanel{
 		add(label);
 		
 		registration = new RegistrationButton();
-		add(registration.newRegistrationButton("Cadastrar novo Bolão"));
+		add(registration.newRegistrationButton("Cadastrar novo Bolão", window));
 		
 		show = new ShowButton();
 		add(show.newShowButton("Mostrar Botões Cadastrados"));
